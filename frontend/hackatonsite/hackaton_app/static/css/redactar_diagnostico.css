@@ -41,3 +41,37 @@ legend.scheduler-border {
 textarea {
 	resize: none;
 }
+
+.imagenDoctor{
+	width:100%;
+}
+
+.resultsRobot{
+	height:auto;
+	width:100%;
+	min-height: 114px;
+}
+
+.btn1{
+	background-color: #41b93f;
+    border-color: #257d17;
+	outline: none;
+}
+
+.btn1:hover{
+	background-color: #166311;
+	border-color: #238635;
+	outline: none;
+}
+
+.btn1:active{
+	background-color: #41b93f;
+    border-color: #257d17;
+	outline: none;
+}
+
+.btn1:focus{
+	background-color: #41b93f;
+    border-color: #257d17;
+	outline: none;
+}

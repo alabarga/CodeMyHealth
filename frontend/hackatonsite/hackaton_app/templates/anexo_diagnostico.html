@@ -13,24 +13,41 @@
 		<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
 	</div>
 	<div class = "content" ng-controller = "anexo_diagnostico">
-		
-		<!-- PDF to TEXT Insert  -->
-		<fieldset class="scheduler-border">
-			<legend class="scheduler-border">Introducción de fichero para diagnóstico</legend>
-			
-			<div class="form-group">
-				<label class="pdf">Introduzca el documento a diagnosticar (extensiones permitidas: '.pdf','.docx'):</label>
-				<input type="file" class="filestyle fileUpload" data-buttonName="btn-primary" file-model="myFile" />
+		<div class="col-sm-6">
+			<div class="col-sm-3 containerImageDoctor">
+				<img class="imagenDoctor"src="{% static 'imagenes/documento2.png' %}" class="image"></img>
 			</div>
-			
-		</fieldset>
-		<div class="col-sm-12 searchContainer">
-			<button type="button" class="btn btn-primary" ng-click="uploadFile()">Diagnosticar</button>
+			<div class="col-sm-9 form-group">
+				<label class="pdf">Introduzca el documento a diagnosticar (extensiones permitidas: '.pdf','.docx'):</label>
+				<input type="file" class="filestyle fileUpload" data-buttonText="Examinar" data-buttonName="btn1 btn" file-model="myFile" />
+			</div>
+			<div class="col-sm-12 searchContainer">
+				<button type="button" class="btn1 btn" ng-click="uploadFile()">Diagnosticar</button>
+			</div>
 		</div>
 		
-		<div ng-repeat="item in dataPDF">
-			<div ng-bind-html="item"></div>
+		<div class="col-sm-6">
+			<div class="col-sm-3 containerImageRobot">
+				<img class="imagenDoctor"src="{% static 'imagenes/robot.png' %}" class="image"></img>
+			</div>
+			<div class="col-sm-9 form-group">
+				<label class="cie">Diagnóstico:</label>
+				<div class="resultsRobot form-control" rows="5" maxlength="350" id="cie">
+					<div ng-repeat="item in textDiagnostico">
+						<div ng-bind-html="item"></div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		
+		<!-- <div class="col-sm-12 searchContainer"> -->
+			<!-- <button type="button" class="btn btn-primary" ng-click="uploadFile()">Diagnosticar</button> -->
+		<!-- </div> -->
+		
+		<!-- <div ng-repeat="item in dataPDF"> -->
+			<!-- <div ng-bind-html="item"></div> -->
+		<!-- </div> -->
 		
 	</div>
 </div>

@@ -14,19 +14,19 @@ angular.module('hackatonApp').controller('anexo_diagnostico', function($scope, $
 	
 	$scope.uploadFile = function(){
 		var file = $scope.myFile;
+		console.log(file)
 		
-		if ($scope.checkExtension(file.name)[1] === 'pdf'){
-			var uploadUrl = "/CodeMyHealth/obtain_text_from_pdf_file/";
-		}else if ($scope.checkExtension(file.name)[1] === 'docx') {
-			var uploadUrl = "/CodeMyHealth/obtain_text_from_docx_file/";
-		}
-		//var uploadUrl = "/CodeMyHealth/obtain_text_from_doc_file/";
-		
-		if ($scope.myFile === undefined){
+		if ($scope.myFile == undefined || $scope.myFile == ""){
 			swal("Campo vacío", "Archivo no seleccionado", "error")
 		}else if (!$scope.checkExtension(file.name)[0]){
 			swal("Extensión incorrecta", "Por favor introduzca un archivo con la extensión correcta ('.pdf','.docx')", "error")
 		}else{
+			if ($scope.checkExtension(file.name)[1] === 'pdf'){
+				var uploadUrl = "/CodeMyHealth/obtain_text_from_pdf_file/";
+			}else if ($scope.checkExtension(file.name)[1] === 'docx') {
+				var uploadUrl = "/CodeMyHealth/obtain_text_from_docx_file/";
+			}
+			//var uploadUrl = "/CodeMyHealth/obtain_text_from_doc_file/";
 			$("#progressMaintenance").css("display","block");
 			$(".content").css("opacity","0.3");
 			//call to service
@@ -36,7 +36,7 @@ angular.module('hackatonApp').controller('anexo_diagnostico', function($scope, $
 					$(".content").css("opacity","1");
 					swal("Failed request", data.data.error, "error");
 				}else{
-					$scope.dataPDF = data.data.response
+					$scope.textDiagnostico = data.data.response
 					$("#progressMaintenance").css("display","none");
 					$(".content").css("opacity","1");
 				}
