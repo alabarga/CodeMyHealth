@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block menu %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/anexo_diagnostico.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/select2.min.css' %}" />
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js"></script> -->
+
+
+<div class="blockMenu container">
+	<div id="progressMaintenance">
+		<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
+	</div>
+	<div class = "content" ng-controller = "anexo_diagnostico">
+		
+		<!-- PDF to TEXT Insert  -->
+		<fieldset class="scheduler-border">
+			<legend class="scheduler-border">Introducción de fichero para diagnóstico</legend>
+			
+			<div class="form-group">
+				<label class="pdf">Introduzca el documento a diagnosticar (extensiones permitidas: '.pdf','.docx'):</label>
+				<input type="file" class="filestyle fileUpload" data-buttonName="btn-primary" file-model="myFile" />
+			</div>
+			
+		</fieldset>
+		<div class="col-sm-12 searchContainer">
+			<button type="button" class="btn btn-primary" ng-click="uploadFile()">Diagnosticar</button>
+		</div>
+		
+		<div ng-repeat="item in dataPDF">
+			<div ng-bind-html="item"></div>
+		</div>
+		
+	</div>
+</div>
+{% endblock %}

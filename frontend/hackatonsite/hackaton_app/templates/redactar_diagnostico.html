@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block menu %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/redactar_diagnostico.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/select2.min.css' %}" />
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js"></script> -->
+
+
+<div class="blockMenu container">
+	<div id="progressMaintenance">
+		<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
+	</div>
+	<div class = "content" ng-controller = "redactar_diagnostico">
+		<div class="col-sm-3 containerImageDoctor">
+			<img class="imagenDoctor"src="{% static 'imagenes/doctor.jpg' %}" class="image"></img>
+		</div>
+		
+		<div class="form-group">
+			<label class="cie">Introduzca el texto a diagnosticar:</label>
+			<textarea class="form-control" rows="5" maxlength="350" id="cie"></textarea>
+			<!-- <input type="text" class="form-control" id="cie"></input> -->
+		</div>
+		
+		<div class="col-sm-12 searchContainer">
+			<button type="button" class="btn btn-primary" ng-click="getDiagnostico()">Buscar</button>
+		</div>
+		
+		<div ng-repeat="item in textDiagnostico">
+			<div ng-bind-html="item"></div>
+		</div>
+		
+	</div>
+</div>
+{% endblock %}

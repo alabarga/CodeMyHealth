@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<HTML>
+<head>
+	<meta charset="UTF-8">
+	
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> <!-- BOOTSTRAP -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sweetalert.css' %}"/> <!-- CSS DE MENSAJES ALERTA -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}"/> <!-- JQUERY -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/select2.min.css' %}"/> <!-- Los select-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" /> <!-- CSS DEL ARCHIVO -->
+	
+	<!-- JS Files -->
+	<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script> <!-- JQUERY -->
+	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.js' %}"></script> <!-- JQUERY -->
+	<script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script> <!-- JQUERY -->
+	<script type="text/javascript" src="{% static 'js/angular.min.js' %}"></script> <!-- ANGULAR -->
+	<script type="text/javascript" src="{% static 'js/ui-bootstrap-tpls-0.11.0.js' %}"></script><!--Paginacion-->
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script> <!-- BOOTSTRAP -->
+	<script type="text/javascript" src="{% static 'js/bootstrap-filestyle.min.js' %}"> </script> <!-- BOOTSTRAP seleccion de archivos -->
+	<script type="text/javascript" src="{% static 'js/sanitize1.2.16.min.js' %}"></script> <!-- para fieldset y angular -->
+	<script type="text/javascript" src="{% static 'js/sweetalert.min.js' %}"> </script> <!-- JS DE MENSAJES ALERTA -->
+	<script type="text/javascript" src="{% static 'js/fileSaver.js' %}"> </script> <!-- EXPORTAR ARCHIVOS -->
+	<script type="text/javascript" src="{% static 'js/base.js' %}"></script> <!-- JS DEL ARCHIVO -->
+	<script type="text/javascript" src="{% static 'js/header.js' %}"></script> <!-- JS DEL ARCHIVO -->
+	<script type="text/javascript" src="{% static 'js/redactar_diagnostico.js' %}"></script> <!-- JS DEL ARCHIVO -->
+	<script type="text/javascript" src="{% static 'js/anexo_diagnostico.js' %}"></script> <!-- JS DEL ARCHIVO -->
+	
+</head>
+
+<body ng-app="hackatonApp" >
+	<div class="page">
+		{% block header %}
+			{% include 'header.html' %}
+		{% endblock %}
+		
+		{% block menu %}
+			{% include 'hackaton_cie.html' %}
+		{% endblock %}
+		
+		{% block footer %}
+			{% include 'footer.html' %}
+		{% endblock %}
+	</div>
+</body>
+
+
+</HTML>

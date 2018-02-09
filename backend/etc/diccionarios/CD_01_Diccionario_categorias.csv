@@ -1,0 +1,11 @@
+CODIGO;CODIGO_CIE;NOMBRE
+0;I00-I02;Fiebre reumática aguda
+1;I05-I09;Enfermedades reumáticas crónicas cardiacas
+2;I10-I16;Enfermedades hipertensivas
+3;I20-I25;Enfermedades isquémicas cardiacas
+4;I26-I28;Enfermedad pulmonar cardiaca y enfermedades de la circulación pulmonar
+5;I30-I52;Otras formas de enfermedad cardiaca
+6;I60-I69;Enfermedades cerebrovasculares
+7;I70-I79;Enfermedades de arterias, arteriolas y capilares
+8;I80-I89;Enfermedades de venas, vasos y ganglios linfáticos, no clasificadas bajo otro concepto
+9;I95-I99;Otros trastornos de aparato circulatorio y los no especificados

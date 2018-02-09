@@ -1,0 +1,348 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   DG Just
+
+
+
+
+
+                                    [pic]
+
+
+
+
+
+                             everis Spain S.L.U
+
+
+
+
+
+
+Tabla de contenidos
+
+
+1     Introducción     3
+
+2     Diagrama   4
+
+3     Extracción 5
+
+4     Traducción 6
+
+5     Carga en HDFS    7
+
+6     Procesado de los comentarios     8
+
+7     Modelos    9
+
+8     Carga en Solr    10
+
+9     FRONTEND   11
+
+10    INTERFAZ CICLECONTROLLER    12
+
+11    Despliegue 13
+
+12    Gestión del Clúster   14
+
+13    Control de versiones  15
+
+14    Dependencias e instalación  16
+
+15    Depuración 17
+
+16    18
+
+
+
+
+
+
+
+
+
+
+
+Introducción
+
+El proyecto consta de varias partes principales:
+
+    • Extracción periódica de la información.
+
+    • Traducción de los datos extraídos que no estén previamente traducidos.
+
+    • Carga de los datos a HDFS.
+
+    • Preparación de la información que se va a ejecutar en los modelos.
+
+    • Ejecución de los modelos sobre los datos preparados.
+
+    • Carga de los datos obtenidos a Solr.
+
+    • Parte FRONT para visualizar la información en Solr.
+
+El proyecto está programado para ejecutarse periódicamente sin  intervención
+humana, utilizando por tanto los mismos modelos una y otra vez. En  el  caso
+de que se quisieran mejorar los datos obtenidos, habría que  reemplazar  los
+ficheros PKL o XLSX de la carpeta analytics.
+
+La ejecución completa de un ciclo sigue  el  mismo  orden  expuesto  arriba,
+pero es posible iniciar un ciclo en el punto que sea  por  cualquier  motivo
+que podamos tener. Esto es  posible  debido  a  la  interfaz  del  programa:
+CicleController
+
+
+Diagrama
+
+
+
+
+
+
+
+
+Extracción
+
+
+Traducción
+
+
+Carga en HDFS
+
+La carga en HDFS se realiza después de haberse realizado  la  traducción  de
+toda aquella información nueva, tanto de productos  (título  y  descripción)
+como de comentarios (título y texto).
+
+Excepto la primera vez, cuando las tablas en  HDFS  están  vacías,  en  cada
+nueva carga en HDFS lo que realmente se  está  haciendo  es  incrementar  la
+información previa. Para realizar esta  función  se  tienen  en  cuenta  dos
+cuestiones fundamentales.
+
+    • Productos preexistentes cuya información en  la  nueva  extracción  es
+      diferente.
+
+    • Productos o comentarios nuevos.
+
+Como HDFS no permite actualizaciones, lo que realmente se está  haciendo  es
+obtener un CSV con toda  la  información  que  existe  para  cada  tabla,  y
+después cruzar ese CSV con los datos extraídos  y  traducidos,  que  también
+están en un CSV, para generar un CSV final mezcla de ambos. El contenido  en
+las tablas de HDFS se borra y se carga el contenido del CSV final.
+
+La información existente en las tablas de HDFS  se  obtiene  en  un  CSV  de
+manera directa, pero el contenido extraído  solo  se  guarda  en  el  CSV  a
+mezclar si tiene la traducción disponible. A modo de ejemplo:
+
+    • 1.2 millones de productos en HDFS
+
+    • 350.000 productos recién extraídos.
+
+    • 275.000 productos de los anteriores están traducidos.
+
+    • Se mezclan los 275.000 productos traducidos con los  1.2  millones  en
+      HDFS
+
+    • Tan solo 75.000 productos son nuevos. Al final  HDFS  tiene  1.275.000
+      productos.
+
+
+
+
+
+
+Procesado de los comentarios
+
+Para aplicar los modelos  a  los  comentarios,  primero  se  deben  preparar
+siguiendo una serie de pasos en riguroso orden. Por tanto,  cada  comentario
+disponible es procesado aplicándole siempre los siguientes pasos:
+
+    • Cambiar caracteres especiales por  sus  análogos.  Ejemplo:  La  barra
+      doble por un guion.
+
+    • Reemplazar las contracciones de las  negaciones  en  inglés.  Ejemplo:
+      “didn’t” por “did not”. Con  el  objetivo  de  preservar  la  negación
+      durante los procesos siguientes.
+
+    • Eliminar  todos  los  signos  de  puntuación  y  convertir  todos  los
+      caracteres del texto a minúscula.
+
+    • Suprimir las ‘stopwords’ que contenga. Son  palabras  sin  significado
+      como artículos, pronombres o determinantes que no aportan  información
+      para el posterior modelo. Ejemplo: ‘did’, ‘the’, ‘you’.
+
+    • Quitar los espacios dobles (o múltiples) que puedan encontrarse.
+
+    • Eliminar todos los términos con una  longitud  mayor  igual  a  quince
+      caracteres.
+
+    • Corregir el texto mediante el reemplazamiento de palabras erróneas por
+      su corrección con el diccionario Aspell.
+
+    • Creación de n-gramas, también por sustitución con  el  correspondiente
+      diccionario. Los n-gramas son cadenas de palabras que,  por  separado,
+      tienen un significado distinto que ligadas. Ejemplo: ‘video games’ por
+      ‘video_games’.
+
+    • Realizar la lexematización (stemming) del texto, es decir, reducir las
+      palabras  a  su  raíz,   sustituyéndolas   con   el   diccionario   de
+      lexematización, por la misma en singular, masculino, infinitivo,  etc.
+      Con el objetivo de reducir la variabilidad del texto antes de  pasarlo
+      por el modelo. Ejemplo: ‘helped’ por ‘help’.
+
+    • Por último, sustituir con el diccionario de sinónimos algunas palabras
+      por sus sinónimos, también para reducir la variabilidad.
+
+
+Modelos
+
+Para el desarrollo del modelo que estudia el carácter  de  los  comentarios,
+se realizó un algoritmo de LDA para obtener los  segmentos  principales.  De
+ahí, salieron las ocho  posibles  categorías  de  fraude/peligrosidad  donde
+después se va a clasificar cada comentario. Las  categorías  citadas,  junto
+con la de satisfacción, son:
+
+   0. Satisfactorio
+
+   1. En desacuerdo
+
+   2. Baja calidad
+
+   3. Defectuoso
+
+   4. En desacuerdo (juguetes)
+
+   5. Roto
+
+   6. No corresponde
+
+   7. Peligroso (juguetes)
+
+   8. Roto a los pocos días de uso
+
+Por motivos del tipo y la cantidad de datos con los que se contaba,  se  han
+tenido que desarrollar cuatro modelos distintos. Tres  para  decidir  si  el
+comentario pertenece o no  a  los  segmentos  7,  8  y  4  (al  tratarse  de
+categorías muy pequeñas) y uno genérico para clasificarlo  en  el  resto  de
+los segmentos.
+
+Para poder pasar los modelos es necesario cargar los 8 archivos  PKL  de  la
+carpeta analytics/input/model  como  en  el  siguiente  código.  Después  se
+calcula una matriz de términos con cada PKL correspondiente y se llama a  la
+función que dará la salida.:
+
+[pic]
+
+Así para cada uno de los cuatro modelos. En el caso de los modelos para  los
+segmentos 7,8 y 4, la salida serán las probabilidades de  pertenecer  o  no,
+cada comentario de la lista introducida, a cada una de  las  categorías.  En
+el PKL genérico, la  salida  será  un  vector  de  6  elementos  (para  cada
+comentario) con la probabilidad  de  pertenecer  a  cada  uno  de  los  seis
+segmentos restantes.
+
+Después, nos quedamos con los datos, de forma que,  cada  comentario  se  ha
+pasado primero por el modelo para el segmento 7, si decide que no  pertenece
+se introduce en el modelo del segmento 4, si tampoco se clasifica en  él  se
+pasa el modelo del 8 y, por último, si sigue sin clasificar se pasa  por  el
+modelo genérico.
+
+Una vez establecidas las probabilidades de pertenencia a cada segmento  para
+cada uno de los comentarios, nos quedamos con el valor máximo de ellas  para
+establecer su segmento principal.
+
+Por último, se procede al cálculo de los scores a nivel producto.  A  partir
+del número de comentarios clasificados en cada segmento para cada  producto,
+se calculan los scores por segmento, y los scores negativo y positivo.  Para
+cada producto, del siguiente modo:
+
+
+
+[pic]
+
+
+
+[pic]
+
+[pic]
+
+[pic]
+
+
+
+[pic]
+
+El resto de scores para cada segment se calculan igual que el ejemplo del
+7. Para el indicador de fraude del producto se usará el score negativo del
+producto. Y para el indicador de peligro el score del segmento 7.
+
+
+Carga en Solr
+
+
+FRONTEND
+
+
+INTERFAZ CICLECONTROLLER
+
+
+Despliegue
+
+
+Gestión del Clúster
+
+
+Control de versiones
+
+
+Dependencias e instalación
+
+
+Depuración
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   -----------------------
+                         Documentación de desarrollo
+
+
+
+
+-----------------------
+
+ 2
+
+
+
+
+
+
+
+
