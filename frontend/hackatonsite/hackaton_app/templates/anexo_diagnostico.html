@@ -9,46 +9,89 @@
 
 
 <div class="blockMenu container">
-	<div id="progressMaintenance">
-		<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
-	</div>
 	<div class = "content" ng-controller = "anexo_diagnostico">
-		<div class="col-sm-6">
-			<div class="col-sm-3 containerImageDoctor">
-				<img class="imagenDoctor"src="{% static 'imagenes/documento2.png' %}" class="image"></img>
+		<div class="col-sm-5">
+			<div class="row containerText">
+				<label class="pdf">Introduce el documento con el diagnóstico que deseas clasificar
+				(Los formatos aceptados son: '.pdf', '.docx', '.txt', '.csv'):</label>
 			</div>
-			<div class="col-sm-9 form-group">
-				<label class="pdf">Introduzca el documento a diagnosticar (extensiones permitidas: '.pdf','.docx'):</label>
-				<input type="file" class="filestyle fileUpload" data-buttonText="Examinar" data-buttonName="btn1 btn" file-model="myFile" />
-			</div>
-			<div class="col-sm-12 searchContainer">
-				<button type="button" class="btn1 btn" ng-click="uploadFile()">Diagnosticar</button>
-			</div>
-		</div>
-		
-		<div class="col-sm-6">
-			<div class="col-sm-3 containerImageRobot">
-				<img class="imagenDoctor"src="{% static 'imagenes/robot.png' %}" class="image"></img>
-			</div>
-			<div class="col-sm-9 form-group">
-				<label class="cie">Diagnóstico:</label>
-				<div class="resultsRobot form-control" rows="5" maxlength="350" id="cie">
-					<div ng-repeat="item in textDiagnostico">
-						<div ng-bind-html="item"></div>
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-4 containerImageDoctor">
+						<img class="imagenDoctor"src="{% static 'imagenes/documento.png' %}" class="image"></img>
+					</div>
+					<div class="col-sm-8 form-group">
+						<div class="arrow_box_small">
+							<input type="file" class="filestyle fileUpload" data-placeholder="Archivo a examinar..." data-buttonText="Examinar" data-buttonName="btn btn-success" file-model="myFile" />
+						</div>
+						
+						<div class="row diagosticarButton">
+							<div class="col-sm-12 searchContainer">
+								<button type="button" class="btn btn-success" ng-click="uploadFile()">Clasificar</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		
+		<div class="col-sm-1">
+		</div>
 		
-		<!-- <div class="col-sm-12 searchContainer"> -->
-			<!-- <button type="button" class="btn btn-primary" ng-click="uploadFile()">Diagnosticar</button> -->
-		<!-- </div> -->
+		<div id="progressMaintenance">
+			<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
+		</div>
 		
-		<!-- <div ng-repeat="item in dataPDF"> -->
-			<!-- <div ng-bind-html="item"></div> -->
-		<!-- </div> -->
-		
+		<div class="col-sm-6 tablas">
+			<div class="row containerTextRight">
+				<label class="cie">El diagnóstico ha sido clasificado como:</label>
+			</div>
+			<div class="row">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="tableTitleCie">Codigo CIE</th>
+							<th class="tableTitleName">Descripción CIE 10</th>
+							<th class="tableTitlePercentage">% Acierto</th>
+						</tr>
+					</thead>
+					
+					<tbody class="bodyTable">
+						<tr ng-repeat="item in textDiagnostico" ng-class="getClass(item)">
+							<td ng-bind-html="item.codigo_cie"></td>
+							<td ng-bind-html="item.nombre"></td>
+							<td ng-bind-html="item.score ? item.score + '%' : ''"></td>
+						</tr>
+					</tbody>
+				</table>
+					<div class="row secondModel">
+						<div class="row">¿No estás de acuerdo con tu diagnóstico? El modelo muestra las siguientes alternativas:</div>
+						<div class="row clickHere" ng-click="mostrar(6)">Pincha aqui</div>
+					</div>
+			</div>
+			
+			<div class="row containerTextRightIR">
+				<label class="cie textCie">El IR devuelve las siguientes sugerencias:</label>
+			</div>
+			<div class="row tablaIR">
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th class="tableTitleCieIR">Codigo CIE</th>
+							<th class="tableTitleNameIR">Nombre</th>
+						</tr>
+					</thead>
+					
+					<tbody class="bodyTableIR">
+						<tr ng-repeat="item in textIR">
+							<td ng-bind-html="item.codigo_cie"></td>
+							<td ng-bind-html="item.nombre"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
 	</div>
 </div>
 {% endblock %}

@@ -3,18 +3,22 @@
 	position: absolute;
 	z-index: 4000;
 	background-color: transparent;
-	width: 85%;
+	width: 50%;
 	height: 100%;
+	margin-left: 40%;
 }
 
 .loader{
-	margin-left: 50%;
-	margin-top: 10%;
+	margin-left: 40%;
+	margin-top: 25%;
 }
 
 .blockMenu{
 	padding-top: 20px;
 	margin-top: auto;
+}
+.tablas{
+	display:none;
 }
 
 fieldset.scheduler-border {
@@ -42,36 +46,256 @@ textarea {
 	resize: none;
 }
 
+.containerImageDoctor{
+	margin-top: 25%
+}
+
 .imagenDoctor{
 	width:100%;
 }
 
-.resultsRobot{
-	height:auto;
+.containerImageRobot{
+	margin-top: 0%;
+}
+
+.imagenRobot{
+	width:70%;
+	margin-left: 13%;
+}
+
+.imagenRobot2{
 	width:100%;
-	min-height: 114px;
 }
 
-.btn1{
-	background-color: #41b93f;
-    border-color: #257d17;
-	outline: none;
+.resultsRobot{
+	width:100%;
+	min-height:200px;
+}
+.scrollBar{
+	overflow:auto;
+	width:100%;
+	min-height:196px;
+	border: none;
 }
 
-.btn1:hover{
-	background-color: #166311;
-	border-color: #238635;
-	outline: none;
+.btn-success{
+	outline:none !important;
 }
 
-.btn1:active{
-	background-color: #41b93f;
-    border-color: #257d17;
-	outline: none;
+.arrow_box textarea{
+	border: none;
 }
 
-.btn1:focus{
-	background-color: #41b93f;
-    border-color: #257d17;
-	outline: none;
+.containerText{
+	margin-bottom:5%;
+}
+
+.containerTextRight{
+	margin-bottom:7%;
+}
+
+.containerTextRightIR{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.placeHolderDiv{
+	color: gray;
+}
+
+/* Colores para los 3 primeros resultados */
+.specialOne {
+	background-color: green;
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	color: white;
+	margin-top:2%;
+	text-align:justify;
+}
+
+.specialTwo {
+	background-color: yellow;
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	color: black;
+	margin-top:2%;
+	text-align:justify;
+}
+
+.specialThree {
+	background-color: orange;
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	color: white;
+	margin-top:2%;
+	text-align:justify;
+}
+
+.noSpecial{
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	margin-top:2%;
+	color: white;
+	background-color: gray;
+	text-align:justify;
+}
+
+
+/* Efecto css del bocadillo pequeño (speech bubble)*/
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #000000;
+	border-radius: 7px;
+}
+.arrow_box:after, .arrow_box:before {
+	right: 100%;
+	top: 80%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 25px;
+	margin-top: -25px;
+}
+.arrow_box:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: #000000;
+	border-width: 28px;
+	margin-top: -28px;
+}
+
+/* Efecto css del bocadillo pequeño (speech bubble)*/
+.arrow_box_right {
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #000000;
+	border-radius: 7px;
+}
+.arrow_box_right:after, .arrow_box_right:before {
+	right: 100%;
+	top: 25%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box_right:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 25px;
+	margin-top: -25px;
+}
+.arrow_box_right:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: #000000;
+	border-width: 28px;
+	margin-top: -28px;
+}
+
+
+
+
+
+.secondModel{
+	display:none;
+}
+
+.clickHere{
+	cursor:pointer;
+	width:20%;
+	color:green;
+}
+
+.clickHere:hover{
+	text-decoration: underline;
+}
+
+.tableTitleCie{
+	width:20%;
+}
+
+.tableTitleName{
+	width:50%;
+}
+
+.tableTitlePercentage{
+	width:30%;
+}
+
+.tableTitleCieIR{
+	width:20%;
+}
+
+.tableTitleNameIR{
+	width:80%;
+}
+
+
+/* medias querys */
+@media only screen and (max-width: 767px){
+	.imagenDoctor {
+		max-height: 50%;
+		max-width: 50%;
+	}
+	
+	.imagenRobot{
+		max-height: 50%;
+		max-width: 50%;
+	}
+	
+	/* Adaptando la speech bubble a tamaños reducidos */
+	.arrow_box {
+		position: relative;
+		background: #ffffff;
+		border: 2px solid #000000;
+		border-radius: 7px;
+	}
+	
+	.arrow_box:after, .arrow_box:before {
+		bottom: 100%;
+		left: 10%;
+		top: auto;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.arrow_box:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #ffffff;
+		border-width: 25px;
+		margin-left: -25px;
+	}
+	
+	.arrow_box:before {
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: #000000;
+		border-width: 28px;
+		margin-left: -28px;
+	}
+	
+	.containerImageDoctor{
+		margin-bottom:10%;
+	}
+	
+	.containerImageRobot{
+		margin-bottom:10%;
+	}
+	
+	
+	
 }

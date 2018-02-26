@@ -1,42 +1,56 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}" />
 <header>
-	<div class="main-head" >
+	<div class="main-head" ng-controller="header">
 		<div class="container headImage">
-			<div class="col-sm-4 containerImage">
-				<img class="imagenRed"src="{% static 'imagenes/red.jpg' %}" class="image"></img>
-			</div>
-			<div class="col-sm-4 containerImage">
-				<img class="imagenLogo"src="{% static 'imagenes/logo.png' %}" class="image"></img>
-			</div>
-			<div class="col-sm-4 containerImage">
-				<img class="imagenHospital"src="{% static 'imagenes/university.png' %}" class="image"></img>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="redContainer">
+						<div class="col-sm-9">
+							<img class="imageCultura"src="{% static 'imagenes/ministerio75.png' %}"></img>
+						</div>
+						<div class="col-sm-3">
+							<img class="imgRedLogo"src="{% static 'imagenes/red75.png' %}"></img>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-1"></div>
+				
+				<div class="col-sm-2">
+					<img class="imagenLogo"src="{% static 'imagenes/code_my_health75.png' %}"></img>
+				</div>
+				
+				<div class="col-sm-1"></div>
+				
+				<div class="col-sm-4">
+					<div class="partnersContainer">
+						<div class="col-sm-8">
+							<img class="imagenHospital"src="{% static 'imagenes/hospital75.png' %}"></img>
+						</div>
+						<div class="col-sm-4">
+							<img class="imageEveris"src="{% static 'imagenes/everis75.png' %}"></img>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
 		<nav class="navbar navbar-default">
 			<div class="container-fluid menuOptions">
 				<ul class="nav navbar-nav">
-					<li class = "{% if request.resolver_match.url_name == 'home' %}active1{% endif %}">
+					<li class = "{% if request.resolver_match.url_name == 'home' %}style_menu{% endif %}">
 						<a onclick="location.href='{% url 'CodeMyHealth:home' %}'"> Redactar diagnóstico</a>
 					</li>
-					<li class = "{% if request.resolver_match.url_name == 'anexo_diagnostico' %}active1{% endif %}">
-						<a onclick="location.href='{% url 'CodeMyHealth:anexo_diagnostico' %}'"> Anexo diagnóstico</a>
+					<li class = "{% if request.resolver_match.url_name == 'anexo_diagnostico' %}style_menu{% endif %}">
+						<a onclick="location.href='{% url 'CodeMyHealth:anexo_diagnostico' %}'"> Anexar diagnóstico</a>
 					</li>
 				</ul>
+				<div class="containerCountry">
+					<img ng-click="changeCountry('esp')" class="imagenEspana" title="Castellano" src="{% static 'imagenes/espana.png'  %}"></img>
+					<img ng-click="changeCountry('cat')" class="imagenCataluna" title="Català" src="{% static 'imagenes/cataluna.png' %}"></img>
+				</div>
 			</div>
 		</nav>
-		<!-- <div class="div_header"> -->
-			<!-- <div class="blueBar"> -->
-			<!-- </div> -->
-		<!-- </div> -->
-		<!-- <nav class="navbar navbar-default"> -->
-			<!-- <div class="container-fluid menuOptions"> -->
-				<!-- <ul class="nav navbar-nav"> -->
-					<!-- <li class = "{% if request.resolver_match.url_name == 'home' %}active{% endif %}"><a class = "" onclick="location.href='{% url 'CodeMyHealth:home' %}'">Redactar diagnóstico</a></li> -->
-					<!-- <li class = "{% if request.resolver_match.url_name == 'anexo_diagnostico' %}active{% endif %}"><a onclick="location.href='{% url 'CodeMyHealth:anexo_diagnostico' %}'">Anexo diagnóstico</a></li> -->
-				<!-- </ul> -->
-			<!-- </div> -->
-		<!-- </nav> -->
 	</div>
 </header>

@@ -8,44 +8,86 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js"></script> -->
 
 
-<div class="blockMenu container">
-	<div id="progressMaintenance">
-		<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
-	</div>
+<div class="blockMenu container-fluid">
 	<div class = "content" ng-controller = "redactar_diagnostico">
-		<div class="col-sm-6">
-			<div class="col-sm-3 containerImageDoctor">
-				<img class="imagenDoctor"src="{% static 'imagenes/doctor3.jpg' %}" class="image"></img>
-			</div>
-			
-			<div class="col-sm-9 form-group">
-				<label class="cie">Introduzca el texto a diagnosticar:</label>
-				<textarea class="form-control" rows="5" maxlength="350" id="cie"></textarea>
-				<!-- <input type="text" class="form-control" id="cie"></input> -->
-			</div>
-			
-			<div class="col-sm-12 searchContainer">
-				<button type="button" class="btn1 btn" ng-click="getDiagnostico()">Diagnosticar</button>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="col-sm-3 containerImageRobot">
-				<img class="imagenDoctor"src="{% static 'imagenes/robot.png' %}" class="image"></img>
-			</div>
-			
-			<div class="col-sm-9 form-group">
-				<label class="cie">Diagnóstico:</label>
-				<div class="resultsRobot form-control" rows="5" maxlength="350" id="cie">
-					<div ng-repeat="item in textDiagnostico">
-						<div ng-bind-html="item"></div>
+		<div class="col-sm-5">
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-4 containerImageDoctor">
+						<img class="imagenDoctor"src="{% static 'imagenes/doctor.jpg' %}" class="image"></img>
+					</div>
+					<div class="col-sm-8 form-group">
+						<div class="arrow_box">
+							<textarea class="form-control" rows="15" id="cie" placeholder="Introduce el texto del diagnóstico médico. Para realizar la clasificación, se utilizarán las 200 primeras palabras del texto..."></textarea>
+						</div>
 					</div>
 				</div>
 			</div>
+			
+			<div class="row">
+				<div class="col-sm-12 searchContainer">
+					<button type="button" class="btn btn-success" ng-click="getDiagnostico()">Clasificar</button>
+				</div>
+			</div>
 		</div>
-		<!-- <div ng-repeat="item in textDiagnostico">
-			<div ng-bind-html="item"></div>
-		</div> -->
 		
+		<div class="col-sm-1">
+		</div>
+		
+		<div id="progressMaintenance">
+			<img class="loader" src="{% static 'imagenes/loading.gif' %}" class="image">
+		</div>
+		
+		<div class="col-sm-6 tablas">
+			<div class="row containerTextRight">
+				<label class="cie">El diagnóstico ha sido clasificado como:</label>
+			</div>
+			<div class="row">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="tableTitleCie">Codigo CIE</th>
+							<th class="tableTitleName">Descripción CIE 10</th>
+							<th class="tableTitlePercentage">% Acierto</th>
+						</tr>
+					</thead>
+				
+					<tbody class="bodyTable">
+						<tr ng-repeat="item in textDiagnostico" ng-class="getClass(item)">
+							<td ng-bind-html="item.codigo_cie"></td>
+							<td ng-bind-html="item.nombre"></td>
+							<td ng-bind-html="item.score ? item.score + '%' : ''"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="row secondModel">
+					<div class="row">¿No estás de acuerdo con tu diagnóstico? El modelo muestra las siguientes alternativas:</div>
+					<div class="row clickHere" ng-click="mostrar(6)">Pincha aqui</div>
+				</div>
+			</div>
+			
+			<div class="row containerTextRightIR">
+				<label class="cie textCie">El IR devuelve las siguientes sugerencias:</label>
+			</div>
+			<div class="row tablaIR">
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th class="tableTitleCieIR">Codigo CIE</th>
+							<th class="tableTitleNameIR">Descripción CIE 10</th>
+						</tr>
+					</thead>
+					
+					<tbody class="bodyTableIR">
+						<tr ng-repeat="item in textIR">
+							<td ng-bind-html="item.codigo_cie"></td>
+							<td ng-bind-html="item.nombre"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
 	</div>
 </div>
 {% endblock %}

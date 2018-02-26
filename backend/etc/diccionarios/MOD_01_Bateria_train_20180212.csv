@@ -1,0 +1,405 @@
+CODIGO;DESCRIPCION;CODIGO_AGRUP;TARGET
+I01.0;Periocarditsi reumtica aguda;I00-I02;0
+I01.1;Endoicarditis reumatica agda;I00-I02;0
+I01.9;Cardioptia reumatica aguda;I00-I02;0
+I02.0;Corea reumaitca con afectaciin cardiaca;I00-I02;0
+I06.1;Insuf aortica reumatica;I05-I09;0
+I06.2;Estenosis aortica reumatica cn insuficiencia;I05-I09;0
+I07.0;Estenosis tricuspidea reumatica;I05-I09;0
+I08.0;Trastornos reumaticos  de aorta y valvula mitral ;I05-I09;0
+I08.2;Trastornos reumaticos tanto de valvula aortica y tricuspide;I05-I09;0
+I08.9;Enferemedad reumatica valvular multiple;I05-I09;0
+I09.0;Miocarditis reumatica;I05-I09;0
+I11.0;insuficiencia cardiaca hipertensiva;I10-I16;0
+I11.9;Enferedad cardiaca hipertensiva sin inuficiencia cardaca;I10-I16;0
+I13.11;Enfermedad cardiaca y renal cronica hipertensiva sin insuficiencia cardiaca con enfermedad renal c;I10-I16;0
+I13.2;Enfermedad cardiaca y renal cronica hipertensiva con insuficiencia cardiaca en estadio 5 o con enfermedad renal en estadio terminal;I10-I16;0
+I15.8;Otra hipertension ;I10-I16;0
+I21.02;Infarto agudo de miocardio con elevacin de ST ;I20-I25;0
+I21.09;Inf agudo de miocardio con elevacion de ST (IAMCEST) (IMEST) (STEMI) con implicacion de otra arteria coronaria de la cara anterior;I20-I25;0
+I21.3;Infarto agudo de miocardio con elevacion de ST localizaion no esecificada;I20-I25;0
+I23.2;Defecto de tabique ventricular omo complicacin actual tras infarto agudo de miocardio;I20-I25;0
+I24.8;enfrmedad isquemica aguda cadiaca;I20-I25;0
+I25.708; derivacion de arteria coronaria, no especificado, con otras formas de angina de pecho;I20-I25;0
+I25.718;Aterosclerosis de injerto(s) venoso atologo de derivacion de arteria coronaria con  angina de pecho;I20-I25;0
+I25.719;Aterosclerosis de injeto(s) venoso atologo de derivacionde arteria coronaria, con angina  no especificada;I20-I25;0
+I25.750;Aterosclerois de arteria coronaria nativa de corazon trasplantado con angina inestable;I20-I25;0
+I25.751;Aterosclerosis de arteria coronaria ntiva de corazon trasplantao con angina de pecho co espasmo dcumentado;I20-I25;0
+I25.758;Ateroclerosis de arteria coronaria nativa de corazon trasplantado con otras formas de angina de pecho;I20-I25;0
+I25.760;Aterosclerosis de injerto(s) de deriacion de arteria oronaria de corazon trasplantado con angina inestable;I20-I25;0
+I25.799;Aterosclerosis de otro tipo de injerto(s) de derivacion de arteria coronaria con angina de pecho no especificada;I20-I25;0
+I25.84;Arteriosclerosis coronaria debida a lesion coronaria calcificada;I20-I25;0
+I27.1;Cardiopatia cifoscolioticai;I26-I28;0
+I27.2;Otra hip tension pulmonar secundaria;I26-I28;0
+I28.0;Fistula arteriovenosa de los  pulmones;I26-I28;0
+I30.0;Periocarditis aguuda idiopatica inespecifica;I30-I52;0
+I33.9;Endiocarditis aguda y subaguda, no especif;I30-I52;0
+I35.2;Estenosis con insuficiencia aortica no reumatica;I30-I52;0
+I37.9;Trastorno de valvula pulmonar no reumatico, no esecificado;I30-I52;0
+I40.1;Miocarditis aislad;I30-I52;0
+I42.6;Micardiopatia alcoholica;I30-I52;0
+I42.7;Miocardiopatia por  drogas ;I30-I52;0
+I42.8;Otras miocardipatias;I30-I52;0
+I42.9;Miocardiopatia,;I30-I52;0
+I44.30;Bloqueo auriculoventricular;I30-I52;0
+I44.4;Bloqueo fasciular anterior izq;I30-I52;0
+I44.5;Bloqueo fascicular posterior izq;I30-I52;0
+I45.0;Bloqueo fascicular dcho;I30-I52;0
+I45.6;ndrome de preexcitacion;I30-I52;0
+I48.3;Flutter auricular tipic;I30-I52;0
+I48.91;Fibrilacion auricular no esp;I30-I52;0
+I49.01;Fibrilaicon ventricular;I30-I52;0
+I49.5;Sindrom del seno enfrmo;I30-I52;0
+I50.20;Insuficiencia cardiaca sistolica congestiva;I30-I52;0
+I50.41;Insuficiencia cardiaca combinada sistolica y diastolica ;I30-I52;0
+I50.42;Insuficiencia cardiaca combinada sistolica , crnica;I30-I52;0
+I51.4;Miocaprditis, no especificada;I30-I52;0
+I51.7;Cardiomegalia;I30-I52;0
+I52;Otros trastornos cardiacos en otras enfrmedades ;I30-I52;0
+I60.11;Hemorragia subaracnidea no traumatica de arteria cerebral media dcha;I60-I69;0
+I60.22;Hemorragia subaracnidea no traumatica de arteria comunicante anterior izqda;I60-I69;0
+I60.50;Heorragia suaracnoidea no traumatca de arteria vertebral no especificada;I60-I69;0
+I60.8;Otra hemorragia subaracnoide;I60-I69;0
+I61.0;Hemorragia intracrebral subcortical;I60-I69;0
+I62.02;Hemorragia  subaguda no trauatica;I60-I69;0
+I63.019;Infarto ceebral debido a trombosis de arteria vertebral no especificada;I60-I69;0
+I63.039;Infarto cerebral debido a trobosis de arteria carotida no especifiada;I60-I69;0
+I63.10;Infarto cerebral debido a emblia de arteria preerebral no especificada;I60-I69;0
+I63.132;Inf cerebral debdo a embolia de arteria carotida izquierda;I60-I69;0
+I63.20;Infarto cerebra debido a  estenosis no especificada de arterias cerebrales;I60-I69;0
+I63.212;Infarto cerebral por clusion o estenosis no especificada de arteria;I60-I69;0
+I63.22;Infarto cerebral debido a oclusion o estenosis  basilares;I60-I69;0
+I63.321;Infarto cerebral debido a trombosis de arteria  anterior ;I60-I69;0
+I63.429;Infarto cerebral debido a embolia de arteria cerebral  no ;I60-I69;0
+I63.449;Infarto ceebral ebido a embolia de arteria cerebelosa no especificada;I60-I69;0
+I63.529;Infarto cerebral debido a oclusion o estnosis no especificada de artria cerebral anterior no especificada;I60-I69;0
+I63.8;Otros infrtos cerebrales;I60-I69;0
+I63.9;Inarto cerebral, no especificado;I60-I69;0
+I65.09;Oclusin y estenosis de arteria vertebral no especificada;I60-I69;0
+I65.1;Oclusion y estenosis de arteria bsilar;I60-I69;0
+I66.11;Oclusion y estenosis de arteria cerbral anterior derecha;I60-I69;0
+I66.22;Oclusion y estenosis de arteria cerebral post izquierda;I60-I69;0
+I66.29;Oclusion y estenosis de artria cerebral posterior, no especificada;I60-I69;0
+I67.6;Trombosis no piogena de sistma venoso intracraneal;I60-I69;0
+I67.7;Arteritis cerebral;I60-I69;0
+I67.81;Insufiiencia cerebrovascular aguda;I60-I69;0
+I67.83;Sindrome de en encefaloatia reversible psterior;I60-I69;0
+I68.0;Angiopatia amilde cerebral;I60-I69;0
+I68.2;Arteritis cerebral en otras enfermedades c;I60-I69;0
+I68.8;Otros trastornos cerebrasculares en enfermedades clasificadas bajo otro concepto;I60-I69;0
+I69.021;Disfasia tras hemorragia subaracnoiea no traumatica;I60-I69;0
+I69.023;Trastorno de la fluidez del hala tras hemorragia subaranoidea no traumatica;I60-I69;0
+I69.042;Monoplejia de extremidad inferior tras hmorragia  no traumaica con  de lado  dominante;I60-I69;0
+I69.051; y hemiparesia tras hemorragia subarcnoidea no traumica con fectacion de lado drecho dominante;I60-I69;0
+I69.091;Disfagia tras hemorragia subaacnoidea no traum;I60-I69;0
+I69.10; de hemorragia intracerebral no tram;I60-I69;0
+I69.133;Monoplegia de brazo tras hemorragia intracerbral ;I60-I69;0
+I69.152;Hemipljia y hemiparesia tras hemrragia intracerebral no traumatica con afectacion de lado izquierdo dominante;I60-I69;0
+I69.161;paralitico tras hemorragia intracerebral cn afectacion de lado dcho dominante;I60-I69;0
+I69.164;Otro sindrom paralitico tras emorragia intracerebral no traumatica con afectacion de lado izquierdo no dominante;I60-I69;0
+I69.169; paralitico tras hemorragia intracerebral no traumatica con afectacion;I60-I69;0
+I69.193;Atasia tras hemorragia intracerebral no traumatica;I60-I69;0
+I69.220;Afasia tras otro tipo de hemrragia intracraneal no traumtica;I60-I69;0
+I69.234;Monopljia de xtremidad superior tras otro tipo de hemorragia intracraneal no traumtica con afectacion de lado izquierdo no dominante;I60-I69;0
+I69.239;Monopljia de extremidad superior tras tro tipo de hemorragia intrcraneal no traumatica con afectacion de lado no especificado;I60-I69;0
+I69.259;Hemiplejia y hemiaresia tras otro tipo de hemrragia intracraneal no traumatica cn afectacion de lado n specificado;I60-I69;0
+I69.30;Secuelas  de infarto cerebral;I60-I69;0
+I69.320;Afasia tras infart cerebral;I60-I69;0
+I69.334;Monopljia de brazo tras infarto cerebral con afectacion de lado izquierdo no dominante;I60-I69;0
+I69.342;Monoplejia de extremidad infrior tras infarto cerebral con afectacion de lado izq dominante;I60-I69;0
+I69.344;Monoplejia de extremidad infrior tras infarto crebral con afectacin de lado izquierdo no dominante;I60-I69;0
+I69.351;Hemiplejia y hemiparesia tras infarto cerbral con afectacion de lado derecho dominante;I60-I69;0
+I69.390;Apraxia tras infarto cerbrael;I60-I69;0
+I69.80;Secuelas no especifi de otro tipo de enfermdad cerebrovascular;I60-I69;0
+I69.821;Disfasia tras otra enfermdad cerebrovascular;I60-I69;0
+I69.822;Disatria tras otra enfrmedad cerebrovascular;I60-I69;0
+I69.828;Otros deficit del habla y  lenguaje tras  enfermedad cerebrovascular;I60-I69;0
+I69.844;Monoplejia de xtremidad inferior tras otra enfermdad cerebrovascular con afectacion de lado izquierdo no dominante;I60-I69;0
+I69.851;Hemiplejia y hemipresia tras otra enfrmedad cerbrovascular con afectacion de lado dcho dominante;I60-I69;0
+I69.859;Hemiplejia y hemiparesia tras otra enfrmedad cerebroascular con afectacion de lado no especificado;I60-I69;0
+I69.865; sindrome paraitico tras  enfermedad cerebovascular, bilateral;I60-I69;0
+I69.931;Monoplejia por enfermedad cerebrovascular no especficada con afectacion de lao derecho dominante;I60-I69;0
+I69.939;Monoplejia de extremiad superior tras enfermedad cerebrovascular no especiicada con afectacion de lado no epecificado;I60-I69;0
+I69.942;Monopljia de extremidad infrior tras enfermedad cerebroascular no especifiada con afectacion de lado izquierdo dominante;I60-I69;0
+I69.952;Hemiplejia y hemiparesia tras nfermedad cerebrovscular n especificada con afectacion de lado izquierdo dominante;I60-I69;0
+I69.993;Ataxia tras enfermedad cerebrovacular no especifcada;I60-I69;0
+I70.202;Aterosclerosis no especificada de rterias nativas de las extrmidades, pierna izqrda;I70-I79;0
+I70.212;Aterosclerosis d arterias nativas de extrmidades con claudicacion intermitente, pierna izquierda;I70-I79;0
+I70.223;Aterosclerosis d arterias nativas de extremidades con dolor en reposo bilateral;I70-I79;0
+I70.229;Aterosclerosis de artrias nativas de extremidades con dolor en reposo, extrmidad no especificada;I70-I79;0
+I70.231;Aterosclerosis de arterias natias de piern dcha con ulceracion de muslo;I70-I79;0
+I70.244;Aterosclrosis de arterias nativas de pierna izquierda con ulceracion de talon y parte mdia del pie;I70-I79;0
+I70.263;Ateroscosis de arterias nativas de extremades con gangena, pierns, bilateral;I70-I79;0
+I70.301;Ateroscleris no especificada de tipo no especificado de injerto de derivacion de las extremidades, pierna derecha;I70-I79;0
+I70.318;Aterosclerosis de tipo no especificado de injertos de derivacion e las extremiades con claudicacion intermtente, otra extremidad;I70-I79;0
+I70.322;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con dolor en reposo, perna izquierda;I70-I79;0
+I70.339;Aterosclerosis de tipo no especificado de injerto de derivacion de pierna derecha con ulceracion de localizacion no especificada;I70-I79;0
+I70.343;Aterosclerosis de tipo no especificado de injert de derivacion de pierna izquierda con ulceracion de tobillo;I70-I79;0
+I70.393;Otra aterosclerosis no especificada de injerto de derivacion de las exremidades, piernas, bilateral;I70-I79;0
+I70.399;Otra atersclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades, extrmidad no especificada;I70-I79;0
+I70.422;Aterosclerosis de injerto de drivacion venoso autologo d las extremidades con dolor en reposo, pierna izquierda;I70-I79;0
+I70.435;Aterosclerosis de injerto de derivacion vnoso autologo de pierna drecha con ulceracion de otra part del pie;I70-I79;0
+I70.438;Aterosclerosis de injerto) de derivacion venoso autologo de pirna derecha con ulceracion de otra localiacion de parte inferior de pierna;I70-I79;0
+I70.449;Aterosclerosis de injerto(s) de derivacion venoso autolgo de pierna izrda con ulceracion de localizacion no especificada;I70-I79;0
+I70.469;Atesclerosis de injerto de derivacion venoso autoogo de extremidades con gangrena, extremidad no especificada;I70-I79;0
+I70.509;Ateosclerosis no especificada de injrto de derivaci biologico no tologo de las extremidades, extremidad no especificada;I70-I79;0
+I70.512;Ateroscerosis de injerto de derivacion biologico no autjkiologo de las extremidgades con claudicacion intgermitente, pierna izquierda;I70-I79;0
+I70.519;Ateroscleroesis de injerto de derivacion biologico no autlogo de las extremidades con claudicacion intermitente, extremidad no especificada;I70-I79;0
+I70.534;Aterosclerosis de injerto de derivacion biologico no auologo de pierna derecha con ulceracion de talon y parte media del pie;I70-I79;0
+I70.535;Aterosclerosis de injertoa de derivacion biologico no autologo de pierna derecha con ulceracion de otra parte del pie;I70-I79;0
+I70.621;Aterosclerosis de injertou de derivacion no biologico de las extrekidades con dolor en reposo, pierna derecha;I70-I79;0
+I70.635;Aterosclerosis de injertoe de derivacion no biologico de pierta derecha con ulceracion de otra parte del pie;I70-I79;0
+I70.669;Atrosclerosis de injerto de derivaion no biologico de las extrmidades con gangrena, extremidad no especificada;I70-I79;0
+I70.709;Aterosclerosis no especificada de otro tipo de injerto de derivacion d las extremidades, extremidad no espcificada;I70-I79;0
+I70.711;Atrosclerosis de otro tipo de injerto de drivacion de las extremidades con claudicacion intermitente, pierna derecha;I70-I79;0
+I70.718;Aterosclerosis de otro tipo de injerto de erivacion de las xtremidades con claudicacion intermitente, otra extremidad;I70-I79;0
+I70.731;Aterosclerosis de otro tipo de injertos de derivscion de pierna derecha con ulceracion de muslo;I70-I79;0
+I70.745;Aterosclerosis de otro tipo de injerto de drivacion de pierna izquierda con ulcera ;I70-I79;0
+I70.763;Aterosclerosis  derivacion de las extremidades con gangrena,;I70-I79;0
+I70.768;Aterosclerosis de  tipo de  de deriacion de la tremidades con gangrena, otra extremidad;I70-I79;0
+I70.791;Otra aterosclerosis de otro tipo de  de derivacion de las extrmidades, piern derecha;I70-I79;0
+I70.799;Otra aterosclerosis de otro tipo de injerto de drivacion de las extremidades, extrmidad no especificada;I70-I79;0
+I71.02;Diseccion de aorta abdominsl;I70-I79;0
+I71.1;Aneurisma de arta toracica, roto;I70-I79;0
+I71.4;Aneurisma de aora abdominal, sin roura;I70-I79;0
+I72.8;Aeurisma de otras arterias especificadas;I70-I79;0
+I74.19;Emboli y trobosis de otras pates de aorta;I70-I79;0
+I74.2;Emboia y trombosis de arerias de los miembos superiores;I70-I79;0
+I77.5;Necrosi de arterial;I70-I79;0
+I77.72;Disecion de arteria ilaca;I70-I79;0
+I80.212;Flebitis y trombofleitis de vena iliaca izquierda;I80-I89;0
+I80.221;Flebiis y tromboflebitis de vena popltea derecha;I80-I89;0
+I80.223;Flebitis y trombolebitis de vena pplitea, bilateral;I80-I89;0
+I80.292;Flebitis y trombolebitis de otros vasos profndos de extreidad inferior izquierda;I80-I89;0
+I80.293;Flebitis y tromboflebiis de otros vaos profunos de extremidades inferiores, bilateral;I80-I89;0
+I81;Tromosis de vena porta;I80-I89;0
+I82.221;Emboli y trombosis croncas de vena cava iferior;I80-I89;0
+I82.291;Embolia y trombosis cronicas de otras venas torcicas;I80-I89;0
+I82.433;trombosis agudas de vena poitea, bilateral;I80-I89;0
+I82.4Z2;Embolia y trombosis aguda de venas profunds no especificaas de la parte distal de la extremidad inferior izquierda;I80-I89;0
+I82.4Z3;Embolia y tombosis agudas de venas profundas no especificadas de la parte distal de la extremidad inferior, bilateral;I80-I89;0
+I82.501;Embolia y trombosis cronicas de venas profundas no espeficadas de extremidad inferior, derecha;I80-I89;0
+I82.512;Embolia y trobosis cronias de vena femoral izqerda;I80-I89;0
+I82.519;Embolia y trombosis cronicas de ven feoral no especificada;I80-I89;0
+I82.523;Embolia y tromosis croicas de vna iliaca, bilateral;I80-I89;0
+I82.533;Embolia y trombosis cronicas de vna poplitea, bilateral;I80-I89;0
+I82.541;Embolia y trombois cronicas de vena tibial derecha;I80-I89;0
+I82.542;Emolia y trombosis cronicas de vena tibial izquierda;I80-I89;0
+I82.5Z2;Embolia y tromosis cronicas de venas prfundas no especificadas e la parte distal de la extremiad inferior izquierda;I80-I89;0
+I82.603;Embolia y tromboss agudas de venas especificaas de extremidad superior, bilateral;I80-I89;0
+I82.613;Embolia y trombois agudas de venas superficiles de exremidad superior, bilateral;I80-I89;0
+I82.703;Emolia y tromosis cronicas de vnas de extremidad superior no especificadas, bilateral;I80-I89;0
+I82.721;Embolia y trombosis crnicas de venas rofundas de extremidad superior derecha;I80-I89;0
+I82.A12;Embolia y trobosis agudas de vena axilar izq;I80-I89;0
+I82.A21;Emolia y trombosis croicas de vena ailar derecha;I80-I89;0
+I82.B11;Emboia y trombosis audas de vena subclavia derecha;I80-I89;0
+I82.B12;Emolia y trobosis agdas de vena subclaia izquierda;I80-I89;0
+I82.C19;Emboia y tromosis agudas de vea yuglar interna no especificada;I80-I89;0
+I82.C29;Embolia y trombosis cronias de vena yugular intrna no especiicada;I80-I89;0
+I83.015;Venas varicsas de extremidad inferior derecha con lcera de otra parte del pie;I80-I89;0
+I83.022;Venas varicosas de extreidad inferior izquierda cn ulcera de pantorrilla;I80-I89;0
+I83.028;Venas varicsas de extremidad iferior izquierda con ulcera de otra loclizacion de parte inferior de pierna;I80-I89;0
+I83.019;varices en pierna derecha con ulcera de localizacion no especificada;I80-I89;1
+I62.00;Hematomas subdurales cronicos bilaterales;I60-I69;1
+I25.89;Ingreso programado para cateterismo;I20-I25;1
+I21.4;Infarto agudo de miocardio sin elevacion de ST (IAMSEST) (IMNEST) (NSTEMI);I20-I25;2
+I22.0;Infarto agudo de miocardio subsiguiente con elevacion de ST (IAMCEST) (IMEST) (STEMI) de pared anterior;I20-I25;2
+I22.2;Infarto agudo de miocardio subsiguiente sin elevacion de ST (IMSEST) (IMNEST) (NSTEMI);I20-I25;2
+I23.5;Rotura de musculo papilar como complicacion actual tras infarto agudo de miocardio;I20-I25;2
+I23.6;Trombosis de auricula, orejuela y ventriculo como complicacion actual tras infarto agudo de miocardio;I20-I25;2
+I25.110;Enfermedad cardiaca aterosclerotica de arteria coronaria nativa con angina de pecho inestable;I20-I25;2
+I25.111;Enfermedad cardiaca aterosclerotica de arteria coronaria nativa con angina de pecho con espasmo documentado;I20-I25;2
+I25.119;Enfermedad cardiaca aterosclerotica de arteria coronaria nativa con angina de pecho no especificada;I20-I25;2
+I25.3;Aneurisma de corazon;I20-I25;2
+I25.729;Ateroesclerosis de injerto(s) arterial autologo de derivacion de arteria coronaria con angina de pecho no especificada;I20-I25;2
+I25.730;Aterosclerosis de injerto(s) biologico no autologo de derivacion de arteria coronaria con angina de pecho inestable;I20-I25;2
+I25.791;Aterosclerosis de otro tipo de injerto(s) de derivacion de arteria coronaria con angina de pecho con espasmo documentado;I20-I25;2
+I25.82;Oclusion total cronica de arteria coronaria;I20-I25;2
+I26.09;Otra embolia pulmonar con cor pulmonale agudo;I26-I28;2
+I26.92;Embolo en silla de montar de arteria pulmonar sin cor pulmonale agudo;I26-I28;2
+I26.99;Otra embolia pulmonar sin cor pulmonale agudo;I26-I28;2
+I28.9;Enfermedad de los vasos pulmonares, no especificada;I26-I28;2
+I32;Pericarditis en enfermedades clasificadas bajo otro concepto;I30-I52;2
+I35.0;Estenosis (de la valvula) aortica no reumatica;I30-I52;2
+I35.9;Trastorno de valvula aortica no reumatica, no especificado;I30-I52;2
+I37.1;Insuficiencia de valvula pulmonar no reumatica;I30-I52;2
+I37.8;Otros trastornos de valvula pulmonar no reumaticos;I30-I52;2
+I42.3;Enfermedad endomiocardica (eosinofilica);I30-I52;2
+I42.5;Otras miocardiopatias restrictivas;I30-I52;2
+I45.4;Bloqueo intraventricular inespecifico;I30-I52;2
+I45.5;Otro bloqueo cardiaco especificado;I30-I52;2
+I45.81;Sindrome de QT largo;I30-I52;2
+I45.9;Trastorno de conduccion, no especificado;I30-I52;2
+I46.9;Paro cardiaco, causa no especificada;I30-I52;2
+I47.2;Taquicardia ventricular;I30-I52;2
+I49.3;Extrasistoles ventriculares;I30-I52;2
+I49.40;Despolarizacion prematura no especificada;I30-I52;2
+I49.9;Arritmia cardiaca, no especificada;I30-I52;2
+I50.31;Insuficiencia cardiaca diastolica (congestiva), aguda;I30-I52;2
+I50.32;Insuficiencia cardiaca diastolica (congestiva), cronica;I30-I52;2
+I60.01;Hemorragia subaracnoidea no traumatica de sifon y bifurcacion carotideos derechos;I60-I69;2
+I60.02;Hemorragia subaracnoidea no traumatica de sifon y bifurcacion carotideos izquierdos;I60-I69;2
+I60.12;Hemorragia subaracnoidea no traumatica de arteria cerebral media izquierda;I60-I69;2
+I60.20;Hemorragia subaracnoidea no traumatica de arteria comunicante anterior no especificada;I60-I69;2
+I60.32;Hemorragia subaracnoidea no traumatica de arteria comunicante posterior izquierda;I60-I69;2
+I60.52;Hemorragia subaracnoidea no traumatica de arteria vertebral izquierda;I60-I69;2
+I61.6;Hemorragia intracerebral no traumatica, localizacion multiple;I60-I69;2
+I63.032;Infarto cerebral debido a trombosis de arteria carotida izquierda;I60-I69;2
+I63.12;Infarto cerebral debido a embolia de arteria basilar;I60-I69;2
+I63.139;Infarto cerebral debido a embolia de arteria carotida no especificada;I60-I69;2
+I63.211;Infarto cerebral debido a oclusion o estenosis no especificada de arterias vertebrales derechas;I60-I69;2
+I63.219;Infarto cerebral debido a oclusion o estenosis no especificada de arterias vertebrales no especificada;I60-I69;2
+I63.239;Infarto cerebral debido a oclusion o estenosis no especificada de arteria carotida no especificada;I60-I69;2
+I63.332;Infarto cerebral debido a trombosis de arteria cerebral posterior izquierda;I60-I69;2
+I63.341;Infarto cerebral debido a trombosis de arteria cerebelosa derecha;I60-I69;2
+I63.342;Infarto cerebral debido a trombosis de arteria cerebelosa izquierda;I60-I69;2
+I63.49;Infarto cerebral debido a embolia de otra arteria cerebral;I60-I69;2
+I63.522;Infarto cerebral debido a oclusion o estenosis no especificada de arteria cerebral anterior izquierda;I60-I69;2
+I63.549;Infarto cerebral debido a oclusion o estenosis no especificada de arteria cerebelosa no especificada;I60-I69;2
+I63.59;Infarto cerebral debido a oclusion o estenosis no especificada de otra arteria cerebral;I60-I69;2
+I65.01;Oclusion y estenosis de arteria vertebral derecha;I60-I69;2
+I65.02;Oclusion y estenosis de arteria vertebral izquierda;I60-I69;2
+I65.03;Oclusion y estenosis de arterias vertebrales bilateral;I60-I69;2
+I65.23;Oclusion y estenosis de arteria carotida bilateral;I60-I69;2
+I65.29;Oclusion y estenosis de arteria carotida, no especificada;I60-I69;2
+I66.12;Oclusion y estenosis de arteria cerebral anterior izquierda;I60-I69;2
+I66.9;Oclusion y estenosis de arteria cerebral no especificada;I60-I69;2
+I69.022;Disartria tras hemorragia subaracnoidea no traumatica;I60-I69;2
+I69.034;Monoplejia de extremidad superior tras hemorragia subaracnoidea no traumatica con afectacion de lado izquierdo no dominante;I60-I69;2
+I69.041;Monoplejia de extremidad inferior tras hemorragia subaracnoidea no traumatica con afectacion de lado derecho dominante;I60-I69;2
+I69.044;Monoplejia de extremidad inferior tras hemorragia subaracnoidea no traumatica con afectacion de lado izquierdo no dominante;I60-I69;2
+I69.049;Monoplejia de extremidad inferior tras hemorragia subaracnoidea no traumatica con afectacion de lado no especificado;I60-I69;2
+I69.052;Hemiplejia y hemiparesia tras hemorragia subaracnoidea no traumatica con afectacion de lado izquierdo dominante;I60-I69;2
+I69.061;Otro sindrome paralitico tras hemorragia subaracnoidea con afectacion de lado derecho dominante;I60-I69;2
+I69.090;Apraxia tras hemorragia subaracnoidea no traumatica;I60-I69;2
+I69.093;Ataxia tras hemorragia subaracnoidea no traumatica;I60-I69;2
+I69.11;Deterioro cognitivo tras hemorragia intracerebral no traumatica;I60-I69;2
+I69.131;Monoplejia de extremidad superior tras hemorragia intracerebral no traumatica con afectacion de lado derecho dominante;I60-I69;2
+I69.141;Monoplejia de extremidad inferior tras hemorragia intracerebral no traumatica con afectacion de lado derecho dominante;I60-I69;2
+I69.144;Monoplejia de extremidad inferior tras hemorragia intracerebral no traumatica con afectacion de lado izquierdo no dominante;I60-I69;2
+I69.228;Otros deficits del habla y el lenguaje tras otro tipo de hemorragia intracraneal no traumatica;I60-I69;2
+I69.241;Monoplejia de extremidad inferior tras otro tipo de hemorragia intracraneal no traumatica con afectacion de lado derecho dominante;I60-I69;2
+I69.243;Monoplejia de extremidad inferior tras otro tipo de hemorragia intracraneal no traumatica con afectacion de lado derecho no dominante;I60-I69;2
+I69.265;Otro sindrome paralitico tras otro tipo de hemorragia intracraneal no traumatica, bilateral;I60-I69;2
+I69.291;Disfagia tras otro tipo de hemorragia intracraneal no traumatica;I60-I69;2
+I69.321;Disfasia tras infarto cerebral;I60-I69;2
+I69.332;Monoplejia de extremidad superior tras infarto cerebral con afectacion de lado izquierdo dominante;I60-I69;2
+I69.339;Monoplejia de extremidad superior tras infarto cerebral con afectacion de lado no especificado;I60-I69;2
+I69.361;Otros sindromes paraliticos tras infarto cerebral con afectacion de lado derecho dominante;I60-I69;2
+I69.81;Deterioro cognitivo tras otra enfermedad cerebrovascular;I60-I69;2
+I69.869;Otro sindrome paralitico tras otra enfermedad cerebrovascular con afectacion de lado no especificado;I60-I69;2
+I69.921;Disfasia tras enfermedad cerebrovascular no especificada;I60-I69;2
+I69.928;Otros deficits del habla y el lenguaje tras enfermedad cerebrovascular no especificada;I60-I69;2
+I69.953;Hemiplejia y hemiparesia tras enfermedad cerebrovascular no especificada con afectacion de lado derecho no dominante;I60-I69;2
+I69.959;Hemiplejia y hemiparesia tras enfermedad cerebrovascular no especificada con afectacion de lado no especificado;I60-I69;2
+I69.990;Apraxia tras enfermedad cerebrovascular no especificada;I60-I69;2
+I69.992;Paresia facial tras enfermedad cerebrovascular no especificada;I60-I69;2
+I70.0;Aterosclerosis de aorta;I70-I79;2
+I70.209;Aterosclerosis no especificada de arterias nativas de las extremidades, extremidad no especificada;I70-I79;2
+I70.233;Aterosclerosis de arterias nativas de pierna derecha con ulceracion de tobillo;I70-I79;2
+I70.269;Aterosclerosis de arterias nativas de extremidades con gangrena, extremidad no especificada;I70-I79;2
+I70.298;Otras aterosclerosis de arterias nativas de las extremidades, otra extremidad;I70-I79;2
+I70.302;Aterosclerosis no especificada de tipo no especificado de injerto(s) de derivacion de las extremidades, pierna izquierda;I70-I79;2
+I70.319;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con claudicacion intermitente, extremidad no especificada;I70-I79;2
+I70.321;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con dolor en reposo, pierna derecha;I70-I79;2
+I70.328;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con dolor en reposo, otra extremidad;I70-I79;2
+I70.329;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con dolor en reposo, extremidad no especificada;I70-I79;2
+I70.334;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de pierna derecha con ulceracion de talon y parte media del pie;I70-I79;2
+I70.363;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con gangrena, piernas, bilateral;I70-I79;2
+I70.368;Aterosclerosis de tipo no especificado de injerto(s) de derivacion de las extremidades con gangrena, otra extremidad;I70-I79;2
+I70.391;Otra aterosclerosis no especificada de injerto(s) de derivacion de las extremidades, pierna derecha;I70-I79;2
+I70.392;Otra aterosclerosis no especificada de injerto(s) de derivacion de las extremidades, pierna izquierda;I70-I79;2
+I70.411;Aterosclerosis de injerto(s) de derivacion venoso autologo de las extremidades con claudicacion intermitente, pierna derecha;I70-I79;2
+I70.412;Aterosclerosis de injerto(s) de derivacion venoso autologo de las extremidades con claudicacion intermitente, pierna izquierda;I70-I79;2
+I70.429;Aterosclerosis de injerto(s) de derivacion venoso autologo de extremidades con dolor en reposo, extremidad no especificada;I70-I79;2
+I70.433;Aterosclerosis de injerto(s) de derivacion venoso autologo de pierna derecha con ulceracion de tobillo;I70-I79;2
+I70.463;Aterosclerosis de injerto(s) de derivacion venoso autologo de las extremidades con gangrena, piernas, bilateral;I70-I79;2
+I70.468;Aterosclerosis de injerto(s) de derivacion venoso autologo de las extremidades con gangrena, otra extremidad;I70-I79;2
+I70.491;Otros tipos de aterosclerosis de injerto(s) de derivacion venoso autologo de las extremidades, pierna derecha;I70-I79;2
+I70.498;Otros tipos de aterosclerosis de injerto(s) de derivacion venoso autologo de las extremidades, otra extremidad;I70-I79;2
+I70.521;Aterosclerosis de injerto(s) de derivacion biologico no autologo de las extremidades con dolor en reposo, pierna derecha;I70-I79;2
+I70.522;Aterosclerosis de injerto(s) de derivacion biologico no autologo de las extremidades con dolor en reposo, pierna izquierda;I70-I79;2
+I70.523;Aterosclerosis de injerto(s) de derivacion biologico no autologo de las extremidades con dolor en reposo, piernas, bilateral;I70-I79;2
+I70.531;Aterosclerosis de injerto(s) de derivacion biologico no autologo de pierna derecha con ulceracion de muslo;I70-I79;2
+I70.545;Aterosclerosis de injerto(s) de derivacion biologico no autologo de pierna izquierda con ulceracion de otra parte del pie;I70-I79;2
+I70.568;Aterosclerosis de injerto(s) de derivacion biologico no autologo de las extremidades con gangrena, otra extremidad;I70-I79;2
+I70.569;Aterosclerosis de injerto(s) de derivacion biologico no autologo de las extremidades con gangrena, extremidad no especificada;I70-I79;2
+I70.608;Aterosclerosis no especificada de injerto(s) de derivacion no biologico de las extremidades, otra extremidad;I70-I79;2
+I70.609;Aterosclerosis no especificada de injerto(s) de derivacion no biologico de las extremidades, extremidad no especificada;I70-I79;2
+I70.629;Aterosclerosis de injerto(s) de derivacion no biologico de las extremidades con dolor en reposo, extremidad no especificada;I70-I79;2
+I70.631;Aterosclerosis de injerto(s) de derivacion no biologico de pierna derecha con ulceracion de muslo;I70-I79;2
+I70.643;Aterosclerosis de injerto(s) de derivacion no biologico de pierna izquierda con ulceracion de tobillo;I70-I79;2
+I70.644;Aterosclerosis de injerto(s) de derivacion no biologico de pierna izquierda con ulceracion de talon y parte media del pie;I70-I79;2
+I70.65;Aterosclerosis de injerto(s) de derivacion no biologico de otra extremidad con ulceracion;I70-I79;2
+I70.721;Aterosclerosis de otro tipo de injerto(s) de derivacion de las extremidades con dolor en reposo, pierna derecha;I70-I79;2
+I70.728;Aterosclerosis de otro tipo de injerto(s) de derivacion de las extremidades con dolor en reposo, otra extremidad;I70-I79;2
+I70.738;Aterosclerosis de otro tipo de injerto(s) de derivacion de pierna derecha con ulceracion de otra localizacion de parte inferior de pierna;I70-I79;2
+I70.744;Aterosclerosis de otro tipo de injerto(s) de derivacion de pierna izquierda con ulceracion de talon y parte media del pie;I70-I79;2
+I70.749;Aterosclerosis de otro tipo de injerto(s) de derivacion de pierna izquierda con ulceracion de localizacion no especificada;I70-I79;2
+I71.5;Aneurisma de aorta toracoabdominal, roto;I70-I79;2
+I71.6;Aneurisma de aorta toracoabdominal, sin rotura;I70-I79;2
+I72.2;Aneurisma de arteria renal;I70-I79;2
+I73.1;Tromboangeitis obliterante [enfermedad de Buerger];I70-I79;2
+I74.10;Embolia y trombosis de partes no especificadas de aorta;I70-I79;2
+I75.011;Ateroembolismo de extremidad superior derecha;I70-I79;2
+I77.1;Estenosis de arteria;I70-I79;2
+I79.8;Otros trastornos de arterias, arteriolas y capilares en enfermedades clasificadas bajo otro concepto;I70-I79;2
+I80.11;Flebitis y tromboflebitis de vena femoral derecha;I80-I89;2
+I80.202;Flebitis y tromboflebitis de vasos profundos no especificados de extremidad inferior izquierda;I80-I89;2
+I80.203;Flebitis y tromboflebitis de vasos profundos no especificados de extremidades inferiores, bilateral;I80-I89;2
+I80.219;Flebitis y tromboflebitis de vena iliaca no especificada;I80-I89;2
+I80.229;Flebitis y tromboflebitis de vena poplitea no especificada;I80-I89;2
+I80.232;Flebitis y tromboflebitis de vena tibial izquierda;I80-I89;2
+I80.291;Flebitis y tromboflebitis de otros vasos profundos de extremidad inferior derecha;I80-I89;2
+I82.1;Tromboflebitis migratoria;I80-I89;2
+I82.3;Embolia y trombosis de vena renal;I80-I89;2
+I82.401;Embolia y trombosis agudas de venas profundas no especificadas de extremidad inferior derecha;I80-I89;2
+I82.412;Embolia y trombosis agudas de vena femoral izquierda;I80-I89;2
+I82.429;Embolia y trombosis agudas de vena iliaca no especificada;I80-I89;2
+I82.431;Embolia y trombosis agudas de vena poplitea derecha;I80-I89;2
+I82.441;Embolia y trombosis agudas de vena tibial derecha;I80-I89;2
+I82.511;Embolia y trombosis cronicas de vena femoral derecha;I80-I89;2
+I82.513;Embolia y trombosis cronicas de vena femoral, bilateral;I80-I89;2
+I82.5Y2;Embolia y trombosis cronicas de venas profundas no especificadas de la parte proximal de la extremidad inferior izquierda;I80-I89;2
+I82.5Y3;Embolia y trombosis cronicas de venas profundas no especificadas de la parte proximal de la extremidad inferior, bilateral;I80-I89;2
+I82.5Z3;Embolia y trombosis cronicas de venas profundas no especificadas de la parte distal de la extremidad inferior, bilateral;I80-I89;2
+I82.622;Embolia y trombosis agudas de venas profundas de extremidad superior izquierda;I80-I89;2
+I82.701;Embolia y trombosis cronicas de venas no especificadas de extremidad superior derecha;I80-I89;2
+I82.711;Embolia y trombosis cronicas de venas superficiales de extremidad superior derecha;I80-I89;2
+I82.719;Embolia y trombosis cronicas de venas superficiales de extremidad superior no especificada;I80-I89;2
+I82.811;Embolia y trombosis de venas superficiales de extremidad inferior derecha;I80-I89;2
+I82.812;Embolia y trombosis de venas superficiales de extremidad inferior izquierda;I80-I89;2
+I82.A11;Embolia y trombosis agudas de vena axilar derecha;I80-I89;2
+I82.A13;Embolia y trombosis agudas de vena axilar, bilateral;I80-I89;2
+I82.B21;Embolia y trombosis cronicas de vena subclavia derecha;I80-I89;2
+I82.B29;Embolia y trombosis cronicas de vena subclavia no especificada;I80-I89;2
+I82.C23;Embolia y trombosis cronicas de vena yugular interna, bilateral;I80-I89;2
+I83.008;Venas varicosas de extremidad inferior no especificada con ulcera e inflamacion de otra localizacion de parte inferior de pierna;I80-I89;2
+I83.009;Venas varicosas de extremidad inferior no especificada con ulcera de localizacion no especificada;I80-I89;2
+I83.012;Venas varicosas de extremidad inferior derecha con ulcera de pantorrilla;I80-I89;2
+I83.014;Venas varicosas de extremidad inferior derecha con ulcera de talon y parte media del pie;I80-I89;2
+I83.11;Venas varicosas de extremidad inferior derecha con inflamacion;I80-I89;2
+I83.12;Venas varicosas de extremidad inferior izquierda con inflamacion;I80-I89;2
+I83.201;Venas varicosas de extremidad inferior no especificada con ulcera e inflamacion de muslo;I80-I89;2
+I83.205;Venas varicosas de extremidad inferior no especificada con ulcera e inflamacion de otra parte del pie;I80-I89;2
+I83.219;Venas varicosas de extremidad inferior derecha con ulcera e inflamacion de localizacion no especificada;I80-I89;2
+I83.813;Venas varicosas de extremidad inferior bilaterales con dolor;I80-I89;2
+I83.819;Venas varicosas de extremidad inferior no especificada con dolor;I80-I89;2
+I83.92;Venas varicosas asintomaticas de extremidad inferior izquierda;I80-I89;2
+I85.00;Varices esofagicas sin sangrado;I80-I89;2
+I86.8;Venas varicosas de otras localizaciones especificados;I80-I89;2
+I87.002;Sindrome postrombotico sin complicaciones de extremidad inferior izquierda;I80-I89;2
+I87.003;Sindrome postrombotico sin complicaciones de extremidad inferior, bilateral;I80-I89;2
+I87.013;Sindrome postrombotico con ulcera de extremidad inferior, bilateral;I80-I89;2
+I87.023;Sindrome postrombotico con inflamacion de extremidad inferior, bilateral;I80-I89;2
+I87.2;Insuficiencia venosa (cronica) (periferica);I80-I89;2
+I87.309;Hipertension venosa cronica (idiopatica) sin complicaciones de extremidad inferior no especificada;I80-I89;2
+I87.311;Hipertension venosa cronica (idiopatica) con ulcera de extremidad inferior derecha;I80-I89;2
+I87.399;Hipertension venosa cronica (idiopatica) con otras complicaciones de extremidad inferior no especificada;I80-I89;2
+I88.0;Linfadenitis mesenterica no especificada;I80-I89;2
+I97.0;Sindrome poscardiotomia;I95-I99;2
+I97.110;Hipofuncion cardiaca posprocedimiento despues de cirugia cardiaca;I95-I99;2
+I97.120;Paro cardiaco posprocedimiento despues de cirugia cardiaca;I95-I99;2
+I97.611;Hemorragia y hematoma posprocedimiento de un organo o estructura de aparato circulatorio o estructura despues de derivacion cardiaca;I95-I99;2
+I97.88;Otras complicaciones intraoperatorias de aparato circulatorio, no clasificados bajo otro concepto;I95-I99;2
+I99.9;Trastorno de aparato circulatorio no especificado;I95-I99;2

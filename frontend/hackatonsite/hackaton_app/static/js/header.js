@@ -1,8 +1,3 @@
-// $(document).ready(function(){
-	// var selector = '.nav li';
-
-	// $(selector).on('click', function(){
-		// $(selector).removeClass('active');
-		// $(this).addClass('active');
-	// });
-// });
+angular.module('hackatonApp').controller('header', function($scope, $http, $interval,$filter, fileUpload, $rootScope) {
+	
+});

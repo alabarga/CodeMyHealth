@@ -3,13 +3,14 @@
 	position: absolute;
 	z-index: 4000;
 	background-color: transparent;
-	width: 85%;
+	width: 50%;
 	height: 100%;
+	margin-left: 40%;
 }
 
 .loader{
-	margin-left: 50%;
-	margin-top: 10%;
+	margin-left: 40%;
+	margin-top: 25%;
 }
 
 .blockMenu{
@@ -42,33 +43,285 @@ legend.scheduler-border {
 	width:100%;
 }
 
+.imagenRobot{
+	width:85%;
+}
+
 .resultsRobot{
-	height:auto;
 	width:100%;
-	min-height: 114px;
+	min-height:230px;
+}
+.scrollBar{
+	overflow:auto;
+	width:100%;
+	min-height:230px;
+	border: none;
 }
 
-.btn1{
-	background-color: #41b93f;
-    border-color: #257d17;
-	outline: none;
+.btn-success{
+	outline:none !important;
 }
 
-.btn1:hover{
-	background-color: #166311;
-	border-color: #238635;
-	outline: none;
+.containerText{
+	margin-bottom:12%;
 }
 
-.btn1:active{
-	background-color: #41b93f;
-    border-color: #257d17;
-	outline: none;
+.containerTextRight{
+	margin-bottom:9%;
 }
 
-.btn1:focus{
-	background-color: #41b93f;
-    border-color: #257d17;
-	outline: none;
+.containerImageRobot{
+	margin-top: 5%;
 }
+
+.diagosticarButton{
+	margin-top:12%;
+}
+
+.placeHolderDiv{
+	color: gray;
+}
+
+.secondModel{
+	display:none;
+	margin-top:2%;
+}
+
+.secondModel >.row{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.clickHere{
+	cursor:pointer;
+	width:20%;
+	color:green;
+}
+
+/* ajustar marco del input */
+.input-group .form-control{
+	width: calc(100% + 2px);
+}
+/* arrow_box_small */
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group{
+	margin-left: 2%;
+}
+
+/* Colores para los 3 primeros resultados */
+.specialOne {
+	background-color: green;
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	color: white;
+	margin-top:2%;
+	text-align:justify;
+}
+
+.specialTwo {
+	background-color: yellow;
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	color: black;
+	margin-top:2%;
+	text-align:justify;
+}
+
+.specialThree {
+	background-color: orange;
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	color: white;
+	margin-top:2%;
+	text-align:justify;
+}
+
+.noSpecial{
+	border-radius: 5px;
+	/* text-indent: 2%; */
+	margin-top:2%;
+	color: white;
+	background-color: gray;
+	text-align:justify;
+}
+
+.tablas{
+	display:none;
+}
+
+.tableTitleCie{
+	width:20%;
+}
+
+.tableTitleName{
+	width:50%;
+}
+
+.tableTitlePercentage{
+	width:30%;
+}
+
+.tableTitleCieIR{
+	width:20%;
+}
+
+.tableTitleNameIR{
+	width:80%;
+}
+
+
+/* Efecto css del bocadillo */
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #000000;
+	border-radius: 7px;
+}
+.arrow_box:after, .arrow_box:before {
+	right: 100%;
+	top: 30%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 25px;
+	margin-top: -25px;
+}
+.arrow_box:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: #000000;
+	border-width: 28px;
+	margin-top: -28px;
+}
+
+
+/* Efecto css del bocadillo pequeño (speech bubble)*/
+.arrow_box_small {
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #000000;
+	border-radius: 7px;
+}
+.arrow_box_small:after, .arrow_box_small:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box_small:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 10px;
+	margin-top: -10px;
+}
+.arrow_box_small:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: #000000;
+	border-width: 13px;
+	margin-top: -13px;
+}
+
+
+
+
+/* medias querys */
+@media only screen and (max-width: 767px){
+	.imagenDoctor {
+		max-height: 50%;
+		max-width: 50%;
+	}
+
+	.imagenRobot{
+		max-height: 50%;
+		max-width: 50%;
+	}
 	
+	/* Adaptando la big speech bubble a tamaños reducidos */
+	.arrow_box {
+		position: relative;
+		background: #ffffff;
+		border: 2px solid #000000;
+		border-radius: 7px;
+	}
+	
+	.arrow_box:after, .arrow_box:before {
+		bottom: 100%;
+		left: 10%;
+		top: auto;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.arrow_box:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #ffffff;
+		border-width: 25px;
+		margin-left: -25px;
+	}
+	
+	.arrow_box:before {
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: #000000;
+		border-width: 28px;
+		margin-left: -28px;
+	}
+	
+	/* Adaptando la small speech bubble a tamaños reducidos */
+	.arrow_box_small {
+		position: relative;
+		background: #ffffff;
+		border: 2px solid #000000;
+		border-radius: 7px;
+	}
+	
+	.arrow_box_small:after, .arrow_box_small:before {
+		bottom: 100%;
+		left: 10%;
+		top: auto;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.arrow_box_small:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #ffffff;
+		border-width: 10px;
+		margin-left: -10px;
+	}
+	
+	.arrow_box_small:before {
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: #000000;
+		border-width: 13px;
+		margin-left: -13px;
+	}
+	
+	.containerImageDoctor{
+		margin-bottom:10%;
+	}
+	
+	.containerImageRobot{
+		margin-bottom:10%;
+	}
+	
+	
+}

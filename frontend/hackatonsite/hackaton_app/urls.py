@@ -9,5 +9,5 @@ urlpatterns = [
 	url(r'^getDiagnostico', views.getDiagnostico, name='getDiagnostico'),
 	url(r'^obtain_text_from_pdf_file', views.obtain_text_from_pdf_file, name='obtain_text_from_pdf_file'),
 	url(r'^obtain_text_from_docx_file', views.obtain_text_from_docx_file, name='obtain_text_from_docx_file'),
-	url(r'^obtain_text_from_doc_file', views.obtain_text_from_doc_file, name='obtain_text_from_doc_file'),
+	url(r'^obtain_text_from_text_file', views.obtain_text_from_text_file, name='obtain_text_from_text_file'),
 ]

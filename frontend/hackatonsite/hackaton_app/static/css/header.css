@@ -19,23 +19,49 @@
 }
 
 .containerImage{
-	height:150px;
+	height:106px;
 }
 
-.imagenRed{
-    height: 100%;
+.imageCultura{
+}
+
+.imgRedLogo{
+	
+}
+
+.redContainer{
+	width:100%;
+	margin-top: 5%;
+}
+
+.partnersContainer{
+	width:95%;
 }
 
 .imagenHospital{
-    height: 85%;
+	margin-top: 10%;
+	margin-left: 18%;
 }
 
 .imagenLogo{
-	margin-top:10%;
+	margin-top:12%;
+	margin-left: 20%;
+}
+
+.imageEveris{
+	margin-top:-2%;
 }
 
 .menuOptions{
 	width: 87%;
+}
+
+.blank_type1{
+	width: 10%;
+}
+
+.blank_type2{
+	width: 10%;
 }
 
 li{
@@ -46,19 +72,35 @@ li{
 }
 
 .navbar-default{
-	background: #007b3e url(http://huvr.es/templates/rocio/images/page.png);
+	background: #007b3e url('/static/imagenes/fondo_menu.png');
 }
 
-.active1{
+.style_menu{
 	background-image: -webkit-gradient(linear, left top,left bottom, from(#64f77d), to(#dedfe0));
 }
 
-.active1 a{
+.style_menu a{
 	color: #404040;
 }
 
+.containerCountry{
+	width: 55%;
+	text-align: right;
+	margin-top: 1%;
+	float: right;
+}
 
+.imagenEspana{
+	width:30px;
+	cursor:pointer;
+	opacity:1;
+}
 
+.imagenCataluna{
+	width:40px;
+	cursor:pointer;
+	opacity:0.5;
+}
 
 /* MENU */
 li {
@@ -107,4 +149,14 @@ a:active::before {
 a:hover::before, a:focus::before {
 	transform-origin: left top;
 	transform: scale(1, 1);
+}
+
+/* FIN MENU DESLIZANTE */
+
+
+
+@media only screen and (max-width: 768px){
+	.imagenLogo{
+		margin-left: 0;
+	}
 }

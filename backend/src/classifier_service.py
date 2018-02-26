@@ -17,14 +17,14 @@ def predict():
     if not request.json:
         abort(400)
     content = request.get_json()
+    print content
     if content['texto']:
         texto = content['texto'].encode('utf-8')
+        lang = content['lang']
         print texto
-        salida = clasificador.explotacion(texto)
-        salida = json.dumps(salida, ensure_ascii=False)
-        return salida
+        return json.dumps(clasificador.explotacion_conjunta(texto, lang))
     else:
-        return 'ERROR'
+        abort(400)
 
 
 if __name__ == "__main__":

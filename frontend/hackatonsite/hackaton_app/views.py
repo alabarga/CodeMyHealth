@@ -25,17 +25,16 @@ import json
 import sys
 import logging
 import os
-#sys.path.append('/home/ubuntu/hackaton/hackatonsite/backend/src/')
-
-#from classifier import Classifier
+import subprocess
 
 # Create your views here.
 
 ########################
 ###### HOME VIEW #######
 ########################
+@csrf_exempt
 def home(request):
-    return render(request, 'redactar_diagnostico.html')
+	return render(request, 'redactar_diagnostico.html')
 
 def anexo_diagnostico(request):
     return render(request, 'anexo_diagnostico.html')
@@ -48,17 +47,17 @@ def getDiagnostico(request):
 	try:
 		##llamada al servicio flask que me va a devolver los pesos de los diferentes cies
 		url = 'http://%s:%s/predict' % ('localhost', '5000')
-		json_data = json.dumps({'texto':data['CIE']}).encode('utf-8')
+		json_data = json.dumps({'texto':data['CIE'],'lang':data['lang']}).encode('utf-8')
 		headers = {'content-type': 'application/json'}
 		r = requests.post(url, data=json_data, headers=headers)
-		
 		if r.status_code == 200:
-			result_set['response'] = json.loads(r.content)
+			result = json.loads(r.content)
+			if result.has_key('error'):
+				result_set['error'] = result['error']
+			else:
+				result_set['response'] = json.loads(r.content)
 		else:
-			print "hola"
-			print r.content
 			result_set['error'] = "El servicio REST ha fallado, intentelo más tarde."
-			
 	except Exception as e:
 		print '%s (%s)' % (e.message, type(e))
 		result_set["error"] = "No se ha podido realizar la peticion REST al servicio, intentelo más tarde."
@@ -67,7 +66,8 @@ def getDiagnostico(request):
 @csrf_exempt
 def obtain_text_from_pdf_file(request):
 	result_set = {"response":[],"error":"" }
-	print request.FILES['file']
+	idioma = json.loads(request.POST['lang'])
+
 	try:
 		## Uso de la libreria PDFminer (pdf2text)
 		texto = convert_pdf_to_txt(request.FILES['file'])
@@ -76,15 +76,19 @@ def obtain_text_from_pdf_file(request):
 			return JsonResponse(result_set, safe=False)
 		##llamada al servicio flask que me va a devolver los pesos de los diferentes cies
 		url = 'http://%s:%s/predict' % ('localhost', '5000')
-		json_data = json.dumps({'texto': texto}).encode('utf-8')
+		json_data = json.dumps({'texto': texto, 'lang': idioma}).encode('utf-8')
 		headers = {'content-type': 'application/json'}
 		r = requests.post(url, data=json_data, headers=headers)
 		
 		if r.status_code == 200:
-			result_set['response'] = json.loads(r.content)
+			result = json.loads(r.content)
+			if result.has_key('error'):
+				result_set['error'] = result['error']
+			else:
+				result_set['response'] = json.loads(r.content)
 		else:
 			result_set['error'] = "El servicio REST ha fallado, intentelo más tarde."
-			
+		
 	except Exception as e:
 		print '%s (%s)' % (e.message, type(e))
 		result_set["error"] = "No se ha podido realizar la peticion REST al servicio, intentelo más tarde."
@@ -93,6 +97,7 @@ def obtain_text_from_pdf_file(request):
 @csrf_exempt
 def obtain_text_from_docx_file(request):
 	result_set = {"response":[],"error":"" }
+	idioma = json.loads(request.POST['lang'])
 	try:
 		## Uso de la libreria PDFminer (pdf2text)
 		texto = convert_docx_to_txt(request.FILES['file'])
@@ -101,12 +106,16 @@ def obtain_text_from_docx_file(request):
 			return JsonResponse(result_set, safe=False)
 		##llamada al servicio flask que me va a devolver los pesos de los diferentes cies
 		url = 'http://%s:%s/predict' % ('localhost', '5000')
-		json_data = json.dumps({'texto': texto}).encode('utf-8')
+		json_data = json.dumps({'texto': texto, 'lang': idioma}).encode('utf-8')
 		headers = {'content-type': 'application/json'}
 		r = requests.post(url, data=json_data, headers=headers)
 		
 		if r.status_code == 200:
-			result_set['response'] = json.loads(r.content)
+			result = json.loads(r.content)
+			if result.has_key('error'):
+				result_set['error'] = result['error']
+			else:
+				result_set['response'] = json.loads(r.content)
 		else:
 			result_set['error'] = "El servicio REST ha fallado, intentelo más tarde."
 			
@@ -116,25 +125,28 @@ def obtain_text_from_docx_file(request):
 	return JsonResponse(result_set, safe=False)
 
 @csrf_exempt
-def obtain_text_from_doc_file(request):
+def obtain_text_from_text_file(request):
 	result_set = {"response":[],"error":"" }
+	idioma = json.loads(request.POST['lang'])
 	try:
 		## Uso de la libreria fulltext
-		print "llego"
-		print request.FILES['file']
-		texto = convert_doc_to_txt(request.FILES['file'])
-		print "me voy"
+		texto = convert_text_to_txt(request.FILES['file'])
+		
 		if not texto:
-			result_set["error"] = "Algo fallo al convertir el DOCX a texto"
+			result_set["error"] = "Algo fallo al convertir el archivo a texto"
 			return JsonResponse(result_set, safe=False)
 		##llamada al servicio flask que me va a devolver los pesos de los diferentes cies
 		url = 'http://%s:%s/predict' % ('localhost', '5000')
-		json_data = json.dumps({'texto': texto}).encode('utf-8')
+		json_data = json.dumps({'texto': texto, 'lang': idioma}).encode('utf-8')
 		headers = {'content-type': 'application/json'}
 		r = requests.post(url, data=json_data, headers=headers)
 		
 		if r.status_code == 200:
-			result_set['response'] = json.loads(r.content)
+			result = json.loads(r.content)
+			if result.has_key('error'):
+				result_set['error'] = result['error']
+			else:
+				result_set['response'] = json.loads(r.content)
 		else:
 			result_set['error'] = "El servicio REST ha fallado, intentelo más tarde."
 			
@@ -174,8 +186,9 @@ def convert_docx_to_txt(file):
 	fullText = []
 	for p in document.paragraphs:
 		fullText.append(p.text)
-	print fullText
 	return '\n'.join(fullText)
 
-def convert_doc_to_txt(file):
-	fulltext.get(file)
+def convert_text_to_txt(file):
+	text = ""
+	f = file.read()
+	return f
